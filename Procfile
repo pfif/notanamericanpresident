@@ -1,0 +1,1 @@
+web: cd resources/public/ && python -m http.server 80
