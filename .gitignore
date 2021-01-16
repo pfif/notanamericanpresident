@@ -5,3 +5,4 @@
 .lein-env
 node_modules
 target/
+.nrepl-port

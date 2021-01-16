@@ -16,11 +16,11 @@
     (+ date (* offset future-or-past)))
   )
 
-(defn first-name-and-dates [first-names-set]
+(defn generate-first-name-and-dates [first-names-set]
   (let [first-name-data (random-from-list first-names-set)
-        dob (offset (get first-name-data "date_of_birth"))
-        lifetime (get first-name-data "lifetime")]
-    {:first-name (get first-name-data "first_name")
+        dob (offset (:date_of_birth first-name-data))
+        lifetime (:lifetime first-name-data)]
+    {:first-name (:first_name first-name-data)
      :date-of-birth dob
      :date-of-death (if (not (= lifetime nil))
                       (+ dob (offset lifetime))
@@ -28,5 +28,8 @@
 
 ;; TODO: party, state of birth, last name
 
+(defn generate-last-name [syllables-sets]
+  (let [first-syllable (-> (get syllables-sets ""))]))
+
 (defn tmp []
-  (first-name-and-dates (-> (dataset) (get "first_names"))))
+  (generate-first-name-and-dates (:first_names (dataset))))

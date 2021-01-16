@@ -1,8 +1,8 @@
 (ns notanamericanpresident.dataset
-  (:require [clojure.data.json :as json]))
+  (:require [clojure.edn :as e]))
 
 (defn dataset []
   (->
-   "resources/public/dataset.json"
+   "resources/public/dataset.edn"
    (slurp)
-   (json/read-str)))
+   (e/read-string)))

@@ -12,7 +12,6 @@
                  [ring/ring-defaults "0.3.2"]
                  [hiccup "1.0.5"]
                  [yogthos/config "1.1.7"]
-                 [org.clojure/data.json "1.0.0"]
                  [org.clojure/clojurescript "1.10.773"
                   :scope "provided"]
                  [metosin/reitit "0.5.10"]
@@ -91,7 +90,6 @@
                                   [nrepl "0.8.3"]
                                   [thheller/shadow-cljs "2.11.9"]
                                   [pjstadig/humane-test-output "0.10.0"]
-                                  
  ]
 
                    :source-paths ["env/dev/clj"]
