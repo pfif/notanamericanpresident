@@ -1,5 +1,7 @@
 (ns notanamericanpresident.algorithm
-  (:require [notanamericanpresident.dataset :refer [dataset]]))
+  (:require
+   [notanamericanpresident.dataset :refer [dataset]]
+   [clojure.string :as s]))
 
 (defn random-from-list [set]
   (->> set
@@ -29,7 +31,18 @@
 ;; TODO: party, state of birth, last name
 
 (defn generate-last-name [syllables-sets]
-  (let [first-syllable (-> (get syllables-sets ""))]))
+  (let [first-syllable (-> (:first_syllables syllables-sets)
+                           (random-from-list)
+                           (s/capitalize))
+        last-syllable (-> (:last_syllables syllables-sets)
+                          (random-from-list))
+        middle-syllable? (-> (rand) (> 0.7) (if true false))
+        middle-syllable (if middle-syllable?
+                          (-> (:middle_syllables syllables-sets)
+                              (random-from-list))
+                          "")]
+    (s/join [first-syllable middle-syllable last-syllable])))
 
-(defn tmp []
-  (generate-first-name-and-dates (:first_names (dataset))))
+(defn generate-president [dataset]
+  (merge (generate-first-name-and-dates (:first_names dataset))
+         (generate-last-name (:last_names dataset))))
