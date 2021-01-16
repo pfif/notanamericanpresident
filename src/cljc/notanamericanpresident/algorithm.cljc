@@ -42,6 +42,15 @@
                           "")]
     (s/join [first-syllable middle-syllable last-syllable])))
 
+(defn generate-middle-name [middle-names-set]
+  (println middle-names-set)
+  (if (-> (rand) (> 0.3) (if true false))
+    (random-from-list middle-names-set)
+    nil))
+
 (defn generate-president [dataset]
   (merge (generate-first-name-and-dates (:first_names dataset))
-         {:last-name (generate-last-name (:last_names dataset))}))
+         {:last-name (generate-last-name (:last_names dataset))}
+         {:middle-name (generate-middle-name (:middle_names dataset))}
+         {:state (random-from-list (:states dataset))}
+         {:party (random-from-list ["Republican Party" "Democratic Party"])}))

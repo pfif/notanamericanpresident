@@ -29,12 +29,21 @@
        [:p "generating ..."]
        (let [president (:president @state)]
          [:div.president
-          [:p.name (:first-name president) " " (:last-name president) " "
+          [:p.name
+           (:first-name president)
+           " "
+           (if (:middle-name president)
+             [:span (:middle-name president) " "] [:span " "])
+
+           (:last-name president) " "
            (if (not (= (:date-of-death president) nil))
              [:span.date "(" (:date-of-birth president)
               " - " (:date-of-death president) ")"]
-
              [:span.date "(born " (:date-of-birth president) ")"])]
+
+          [:p.description "He hailed from the state of " (:state president)
+           " and was a member of the " (:party president)]
+
           [:input {:type "button" :value "Generate another president" :on-click #((stateful-generate-president))}]
           ]))]))
 
