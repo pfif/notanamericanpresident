@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 .body{
     display: flex;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+}
+
+h1{
+    font-weight: 300;
+}
+
+h1 > small {
+    display: flex;
+    transform: translate(288px, -24px) rotate(-20deg);
+    font-size: 0.5em;
 }

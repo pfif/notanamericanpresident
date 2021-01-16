@@ -10,7 +10,7 @@
 (defn current-page []
   (fn []
     [:div.body
-     [:h1 "American president generator" [:small "Your very own leader of the free world"]]]))
+     [:h1 "American president generator" [:small "Your very own leader of the free world!"]]]))
 
 ;; -------------------------
 ;; Initialize app
