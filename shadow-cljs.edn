@@ -1,0 +1,8 @@
+{:lein         true
+ :builds       {:app {:target     :browser
+                      :output-dir "resources/public/js"
+                      :asset-path "/js"
+                      :modules    {:app {:entries [notanamericanpresident.core]}}
+                      :devtools   {:after-load notanamericanpresident.core/mount-root}}}
+ :dev-http     {3000 {:root    "resources/public"
+                      :handler notanamericanpresident.handler/app}}}

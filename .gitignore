@@ -1,0 +1,7 @@
+.clj-kondo
+.shadow-cljs
+.log
+.lsp
+.lein-env
+node_modules
+target/
