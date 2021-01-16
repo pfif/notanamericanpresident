@@ -41,11 +41,10 @@
               " - " (:date-of-death president) ")"]
              [:span.date "(born " (:date-of-birth president) ")"])]
 
-          [:p.description "He hailed from the state of " (:state president)
-           " and was a member of the " (:party president)]
+          [:p.description "He hailed from the state of " [:strong (:state president)]
+           " and was a member of the " [:strong (:party president)]]
 
-          [:input {:type "button" :value "Generate another president" :on-click #((stateful-generate-president))}]
-          ]))]))
+          [:input {:type "button" :value "Generate another president" :on-click #((stateful-generate-president))}]]))]))
 
 ;; -------------------------
 ;; initialize app
