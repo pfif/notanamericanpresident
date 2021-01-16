@@ -14,10 +14,7 @@
                  [yogthos/config "1.1.7"]
                  [org.clojure/clojurescript "1.10.773"
                   :scope "provided"]
-                 [metosin/reitit "0.5.10"]                 
-                 [pez/clerk "1.0.0"]
-                 [venantius/accountant "0.2.5"
-                  :exclusions [org.clojure/tools.reader]]]
+                 ]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.7"]
