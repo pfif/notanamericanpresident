@@ -43,9 +43,9 @@
   {:builds {:min
             {:source-paths ["src/cljs" "src/cljc" "env/prod/cljs"]
              :compiler
-             {:output-to        "target/cljsbuild/public/js/app.js"
-              :output-dir       "target/cljsbuild/public/js"
-              :source-map       "target/cljsbuild/public/js/app.js.map"
+             {:output-to        "resources/public/js/app.js"
+              :output-dir       "resources/public/js"
+              :source-map       false
               :optimizations :advanced
               :infer-externs true
               :pretty-print  false}}
