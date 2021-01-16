@@ -1,6 +1,5 @@
 (ns notanamericanpresident.algorithm
   (:require
-   [notanamericanpresident.dataset :refer [dataset]]
    [clojure.string :as s]))
 
 (defn random-from-list [set]

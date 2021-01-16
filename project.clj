@@ -14,7 +14,7 @@
                  [yogthos/config "1.1.7"]
                  [org.clojure/clojurescript "1.10.773"
                   :scope "provided"]
-                 [metosin/reitit "0.5.10"]
+                 [metosin/reitit "0.5.10"]                 
                  [pez/clerk "1.0.0"]
                  [venantius/accountant "0.2.5"
                   :exclusions [org.clojure/tools.reader]]]
@@ -90,6 +90,7 @@
                                   [nrepl "0.8.3"]
                                   [thheller/shadow-cljs "2.11.9"]
                                   [pjstadig/humane-test-output "0.10.0"]
+                                  
  ]
 
                    :source-paths ["env/dev/clj"]
