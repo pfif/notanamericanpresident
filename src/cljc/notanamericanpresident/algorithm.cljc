@@ -27,8 +27,6 @@
                       (+ dob (offset lifetime))
                       nil)}))
 
-;; TODO: party, state of birth
-
 (defn generate-last-name [syllables-sets]
   (let [first-syllable (-> (:first_syllables syllables-sets)
                            (random-from-list)
@@ -43,7 +41,6 @@
     (s/join [first-syllable middle-syllable last-syllable])))
 
 (defn generate-middle-name [middle-names-set]
-  (println middle-names-set)
   (if (-> (rand) (> 0.3) (if true false))
     (random-from-list middle-names-set)
     nil))
