@@ -27,7 +27,7 @@
                       (+ dob (offset lifetime))
                       nil)}))
 
-;; TODO: party, state of birth, last name
+;; TODO: party, state of birth
 
 (defn generate-last-name [syllables-sets]
   (let [first-syllable (-> (:first_syllables syllables-sets)
@@ -44,4 +44,4 @@
 
 (defn generate-president [dataset]
   (merge (generate-first-name-and-dates (:first_names dataset))
-         (generate-last-name (:last_names dataset))))
+         {:last-name (generate-last-name (:last_names dataset))}))

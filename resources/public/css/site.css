@@ -2,8 +2,11 @@
 
 .body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: 'Fraunces', serif;
+    font-size: 2em;
 }
 
 h1{
@@ -11,7 +14,8 @@ h1{
 }
 
 h1 > small {
-    display: flex;
-    transform: translate(288px, -24px) rotate(-20deg);
     font-size: 0.5em;
+}
+
+.name{
 }

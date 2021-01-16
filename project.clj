@@ -72,8 +72,7 @@
    :nrepl-port 7002
    :nrepl-middleware [cider.piggieback/wrap-cljs-repl
                       ]
-   :css-dirs ["resources/public/css"]
-   :ring-handler notanamericanpresident.handler/app}
+   :css-dirs ["resources/public/css"]}
 
 
 
