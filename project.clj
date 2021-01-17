@@ -42,7 +42,7 @@
              :compiler
              {:output-to        "resources/public/js/app.js"
               :output-dir       "resources/public/js"
-              :source-map       false
+              :source-map       "resources/public/js/app.source.js"
               :optimizations :advanced
               :infer-externs true
               :pretty-print  false}}
