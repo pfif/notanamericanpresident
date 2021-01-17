@@ -10,12 +10,8 @@
                     :president nil}))
 
 (defn stateful-generate-president []
-  (reset! state {:generating true
-                 :president nil})
-  (js/setTimeout (fn []
-                   (reset! state
-                           {:generating false :president (generate-president dataset)})) 300)
-  )
+  (reset! state
+          {:generating false :president (generate-president dataset)}))
 
 ;; -------------------------
 ;; Page components
@@ -44,7 +40,7 @@
           [:p.description "He hailed from the state of " [:strong (:state president)]
            " and was a member of the " [:strong (:party president)]]
 
-          [:input {:type "button" :value "Generate another president" :on-click #((stateful-generate-president))}]]))]))
+          [:input {:type "button" :value "Generate another president" :on-click #(stateful-generate-president)}]]))]))
 
 ;; -------------------------
 ;; initialize app
@@ -53,6 +49,6 @@
   (rdom/render [current-page] (.getElementById js/document "app")))
 
 (defn init! []
-  (mount-root)
-  (stateful-generate-president))
+  (stateful-generate-president)
+  (mount-root))
 
