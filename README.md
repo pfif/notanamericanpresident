@@ -2,6 +2,8 @@
 
 This is the notanamericanpresident project.
 
+It is deployed [here](https://not-an-american-president.herokuapp.com/)
+
 ## Development mode
 
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
